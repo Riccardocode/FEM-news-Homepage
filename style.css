@@ -40,10 +40,7 @@ body {
     
 }
 
-.first-ontainer{
-    margin-right: 5rem;
-    margin-left: 5rem;
-}
+
 section{
     margin-bottom: 2rem;
 }
@@ -80,19 +77,28 @@ header nav ul li:hover {
     color: var(--soft-Orange);
 }
 
+header nav .menu-icon {
+    display: none;
+}
+
 .top_content {
     display: flex;
+    
     gap: 1.5rem;
 }
 
 .top_content main {
     width: 70%;
 }
+.main{
+    display:flex;
+
+}
 
 /* > select only the top level tag*/
-.top_content main > img {
+.image-cover {
     width: 100%;
-   
+    padding-right: 2rem;
     /* outline: 1px solid purple; */
     /* object-fit how does it fit within the container*/
    
@@ -122,6 +128,7 @@ header nav ul li:hover {
     font-size: large;
     color:var(--darkGrayishBlue);
     font-family: interRegular;
+    padding-right: 2rem;
     
 }
 
@@ -132,7 +139,7 @@ header nav ul li:hover {
 .top_content aside {
     width: 30%;
 }
-aside hr{
+.aside-main hr{
     color:var(--darkGrayishBlue);
     margin-left: 1rem;
     margin-right:1rem;
@@ -155,7 +162,7 @@ aside hr{
     color:var(--offWhite);
     margin-bottom: 0.5rem;
 }
-aside div{
+.aside-main div{
     margin-left: 1rem;
     margin-right:1rem;
 }
@@ -163,7 +170,7 @@ aside div{
     color:var(--grayishBlue);
     font-family: chosenFont;
 }
-aside h4:hover{
+.aside-main h4:hover{
     color:var(--soft-Orange);
 }
 
@@ -188,21 +195,24 @@ aside h4:hover{
     color:var(--soft-Orange);
     transition: all 300ms ease;
 }
-.top-3{
+.bottom-3{
     display:flex;
     justify-content:space-between;
 
 }
-
-.img-top-3{
+.section-bottom{
+    display:flex;
+    justify-content:space-between;
+    
+}
+.img-bottom-3{
     width:80px;
     margin-right: 10px;
 }
 
-.par-top-3{
-    font-size:small;
-    color:var(--darkGrayishBlue);
-    margin-bottom: 0.5rem;
+.par-bottom-3{
+    font-family: interRegular;
+    color:var(--darkGrayishBlue); 
 }
 
 section h1{
@@ -210,4 +220,35 @@ section h1{
 }
 .h6-orange{
     color:var(--soft-Orange);
+}
+
+@media screen and (max-width:800px){
+    .main{
+        flex-wrap: wrap;
+    }
+    .section-bottom{
+        flex-wrap: wrap;
+        outline: 2px solid purple;
+        
+    }
+    .aside-main{
+        margin-right: 2rem;
+        margin-top: 2rem;
+    }
+    .bottom-3{
+        margin-bottom: 1rem;
+        padding-right: 1rem;
+        outline: 2px solid purple;
+        margin-right: 1rem;
+    }
+    body{
+        padding: 1rem;
+    }
+        
+    header nav .menu-icon {
+    display: block;
+    }
+    header nav ul {
+        display: none;
+    }
 }
